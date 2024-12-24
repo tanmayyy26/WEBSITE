@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Car</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main section styles */
+        section {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .modal button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .modal button:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
+    <script>
+        function redirectToCarListPage(carModel) {
+            // Redirect to a new page with car model as a query parameter (you can change this URL)
+            window.location.href = 'car-list.html?car=' + carModel;
+        }
+
+        // This function handles the form submission
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            const carModel = 'Tesla'; // Replace this with the dynamic car model, if needed
+            showSuccessModal(); // Show the success popup
+        }
+
+        // Function to show the success modal
+        function showSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.style.display = 'flex';
+        }
+
+        // Function to close the success modal
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.style.display = 'none';
+            redirectToCarListPage('Tesla'); // Redirect after closing the modal
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Complete Your Purchase</h1>
+        <div class="nav">
+            <a href="car-list.html">Back to Cars</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="logout.html">Logout</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Purchase Car Model</h2>
+        <p>You're about to buy the Car Model. Please complete the form below to proceed with your purchase.</p>
+        <form onsubmit="submitForm(event)">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+            <label for="address">Shipping Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your shipping address" required><br><br>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="debit-card">Debit Card</option>
+                <option value="bank-transfer">Bank Transfer</option>
+                <option value="cryptocurrency">Cryptocurrency</option>
+            </select><br><br>
+
+            <button class="submit" type="submit">Complete Purchase</button>
+        </form>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h2>Success!</h2>
+            <p>Your purchase was successful. You will be redirected to the car list page.</p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Car Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>

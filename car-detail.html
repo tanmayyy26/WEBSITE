@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showroom - Car Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function redirectToBuyPage(carModel) {
+            // Redirect to a new page with car model as a query parameter (you can change this URL)
+            window.location.href = 'buy-now.html?car=' + carModel;
+        }
+    </script>
+</head>
+<style>
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://t3.ftcdn.net/jpg/09/26/26/04/360_F_926260487_DnabYNmsdqbY7kttU2hKJ4TSMUC8CJFS.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+    /* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav h1 {
+    font-size: 28px;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+/* Car Details Section */
+.car-details {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Car Image */
+.car-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Car Info Section */
+.car-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.car-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.price {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.car-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Buy Now Button */
+.buy-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .car-image img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .car-info {
+        padding: 20px;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="nav">
+            <h1>Car Showroom</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="car-list.html">Back to Cars</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="logout.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://medialamborghini-meride-tv.akamaized.net/meride/lamborghini/video/images/folder1/1252/vlcsnap-2023-03-17-16h18m30s840.jpg" alt="Car Model 1">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 1</h2>
+            <p class="price"><strong>Price:</strong> $20,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 2000cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: Red</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://media.istockphoto.com/id/458230619/photo/range-rover-evoque-2012-front-view.jpg?s=612x612&w=0&k=20&c=SASTohYSMVzVj33DDUpL5FnMwamFiqMhXILmb380iI4=" alt="Car Model 2">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 2</h2>
+            <p class="price"><strong>Price:</strong> $25,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 2500cc</li>
+                <li>Fuel: Diesel</li>
+                <li>Color: Blue</li>
+                <li>Transmission: Manual</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://etimg.etb2bimg.com/thumb/msid-99773398,width-1200,height-900,resizemode-4/.jpg" alt="Car Model 3">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 3</h2>
+            <p class="price"><strong>Price:</strong> $30,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 3000cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: Black</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://teja8.kuikr.com/i5/20241207/Black-2011-Mercedes-Benz-C-Class-250-CDI-Elegance---85000-kms-driven-in-Whitefield-ak_LWBP1837222099-1733568234.jpeg" alt="Car Model 4">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 4</h2>
+            <p class="price"><strong>Price:</strong> $35,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 3500cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: Blue</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://cdn.motor1.com/images/mgl/zxp3Jb/s1/bugatti-centodieci-2022-zehntes-und-letztes-exemplar.jpg" alt="Car Model 5">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 5</h2>
+            <p class="price"><strong>Price:</strong> $40,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 4000cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: Black</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://m.media-amazon.com/images/I/614UrkEPX0L.jpg" alt="Car Model 6">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 6</h2>
+            <p class="price"><strong>Price:</strong> $22,500</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 2500cc</li>
+                <li>Fuel: Diesel</li>
+                <li>Color: White</li>
+                <li>Transmission: Manual</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://financialexpresswpcontent.s3.amazonaws.com/uploads/2019/08/bugatti-Centodieci-660.jpg" alt="Car Model 7">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 7</h2>
+            <p class="price"><strong>Price:</strong> $28,500</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 3000cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: Black</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9RsqgKNYISA-gg1dpp_wwbsvYyPrXXU6Yfw&s" alt="Car Model 8">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 8</h2>
+            <p class="price"><strong>Price:</strong> $26,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 2200cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: Silver</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/2025-rolls-royce-cullinan-black-badge-107-663a56d913506.jpg?crop=0.834xw:0.740xh;0.0799xw,0.178xh&resize=1200:" alt="Car Model 9">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 9</h2>
+            <p class="price"><strong>Price:</strong> $30,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 3500cc</li>
+                <li>Fuel: Diesel</li>
+                <li>Color: Red</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/p90547826-lowres-spectre-escapism-fro.jpg?c=16x9&q=h_833,w_1480,c_fill" alt="Car Model 10">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 10</h2>
+            <p class="price"><strong>Price:</strong> $35,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 4000cc</li>
+                <li>Fuel: Diesel</li>
+                <li>Color: Blue</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcms%2Farticles%2F2024%2F5%2F3213009%2FFerrari_12_Cilindri_133d7c5536.jpg&w=3840&q=75" alt="Car Model 11">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 11</h2>
+            <p class="price"><strong>Price:</strong> $42,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 4200cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: White</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1FkAJfbmJOXkE4d-oaTFm_XkOkWkBvjiQFA&s" alt="Car Model 12">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 12</h2>
+            <p class="price"><strong>Price:</strong> $45,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 4800cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: Blue</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/124839/thar-roxx-exterior-right-front-three-quarter-24.jpeg?isig=0&q=80" alt="Car Model 13">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 13</h2>
+            <p class="price"><strong>Price:</strong> $50,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 5000cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: White</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://images.hindustantimes.com/auto/img/2024/10/13/1600x900/Mercedes_Benz_E_Class_LWB_1728476632286_1728793409613.jpeg" alt="Car Model 14">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 14</h2>
+            <p class="price"><strong>Price:</strong> $55,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 5500cc</li>
+                <li>Fuel: Diesel</li>
+                <li>Color: Yellow</li>
+                <li>Transmission: Manual</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+    <section class="car-details">
+        <div class="car-image">
+            <img src="https://cdni.autocarindia.com/ExtraImages/20190130064236_Tata-Nano.jpg" alt="Car Model 15">
+        </div>
+        <div class="car-info">
+            <h2>Car Model 15</h2>
+            <p class="price"><strong>Price:</strong> $60,000</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 6000cc</li>
+                <li>Fuel: Petrol</li>
+                <li>Color: Red</li>
+                <li>Transmission: Automatic</li>
+            </ul>
+            <button class="buy-btn" onclick="redirectToBuyPage()">Buy Now</button>
+
+        </div>
+    </section>
+
+</body>
+</html>

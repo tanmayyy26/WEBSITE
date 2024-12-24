@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Showroom</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function redirectToCarDetailPage(carModel) {
+            // Redirect to a new page with car model as a query parameter (you can change this URL)
+            window.location.href = 'car-detail.html?car=' + carModel;
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .car {
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 280px;
+            transition: transform 0.3s;
+        }
+        .car:hover {
+            transform: scale(1.05);
+        }
+        .car img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .car-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .car-info h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .car-info p {
+            color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Car Showroom</h1>
+    <p>Find Your Dream Car Today!</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="car-list.html">Cars</a>
+    <a href="about-us.html">About Us</a>
+    <a href="contact-us.html">Contact</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<div class="car-card">
+    <img src="https://medialamborghini-meride-tv.akamaized.net/meride/lamborghini/video/images/folder1/1252/vlcsnap-2023-03-17-16h18m30s840.jpg" alt="Car 1">
+    <h3>Car Model 1</h3>
+    <p>$20,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://media.istockphoto.com/id/458230619/photo/range-rover-evoque-2012-front-view.jpg?s=612x612&w=0&k=20&c=SASTohYSMVzVj33DDUpL5FnMwamFiqMhXILmb380iI4=" alt="Car 2">
+    <h3>Car Model 2</h3>
+    <p>$25,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://etimg.etb2bimg.com/thumb/msid-99773398,width-1200,height-900,resizemode-4/.jpg" alt="Car 3">
+    <h3>Car Model 3</h3>
+    <p>$30,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://teja8.kuikr.com/i5/20241207/Black-2011-Mercedes-Benz-C-Class-250-CDI-Elegance---85000-kms-driven-in-Whitefield-ak_LWBP1837222099-1733568234.jpeg" alt="Car 4">
+    <h3>Car Model 4</h3>
+    <p>$35,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://cdn.motor1.com/images/mgl/zxp3Jb/s1/bugatti-centodieci-2022-zehntes-und-letztes-exemplar.jpg" alt="Car 5">
+    <h3>Car Model 5</h3>
+    <p>$40,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://m.media-amazon.com/images/I/614UrkEPX0L.jpg" alt="Car 6">
+    <h3>Car Model 6</h3>
+    <p>$22,500</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://financialexpresswpcontent.s3.amazonaws.com/uploads/2019/08/bugatti-Centodieci-660.jpg" alt="Car 7">
+    <h3>Car Model 7</h3>
+    <p>$28,500</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9RsqgKNYISA-gg1dpp_wwbsvYyPrXXU6Yfw&s" alt="Car 8">
+    <h3>Car Model 8</h3>
+    <p>$26,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/2025-rolls-royce-cullinan-black-badge-107-663a56d913506.jpg?crop=0.834xw:0.740xh;0.0799xw,0.178xh&resize=1200:*" alt="Car 9">
+    <h3>Car Model 9</h3>
+    <p>$38,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://media.cnn.com/api/v1/images/stellar/prod/p90547826-lowres-spectre-escapism-fro.jpg?c=16x9&q=h_833,w_1480,c_fill" alt="Car 10">
+    <h3>Car Model 10</h3>
+    <p>$50,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<!-- Add more cars in a similar way until Car 50 -->
+
+<div class="car-card">
+    <img src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcms%2Farticles%2F2024%2F5%2F3213009%2FFerrari_12_Cilindri_133d7c5536.jpg&w=3840&q=75" alt="Car 11">
+    <h3>Car Model 11</h3>
+    <p>$27,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1FkAJfbmJOXkE4d-oaTFm_XkOkWkBvjiQFA&s" alt="Car 12">
+    <h3>Car Model 12</h3>
+    <p>$31,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/124839/thar-roxx-exterior-right-front-three-quarter-24.jpeg?isig=0&q=80" alt="Car 13">
+    <h3>Car Model 13</h3>
+    <p>$33,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://images.hindustantimes.com/auto/img/2024/10/13/1600x900/Mercedes_Benz_E_Class_LWB_1728476632286_1728793409613.jpeg" alt="Car 14">
+    <h3>Car Model 14</h3>
+    <p>$34,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+<div class="car-card">
+    <img src="https://cdni.autocarindia.com/ExtraImages/20190130064236_Tata-Nano.jpg" alt="Car 15">
+    <h3>Car Model 15</h3>
+    <p>$42,000</p>
+    <button class="car-detail" onclick="redirectToCarDetailPage()">View Details</button>
+</div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Car Showroom. All rights reserved.</p>
+    <p>Address: 123 Car Street, City, Country</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logging Out</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.logout-message {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.logout-message h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-again-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.login-again-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logout-message {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .logout-message h2 {
+        font-size: 20px;
+    }
+
+    .login-again-btn {
+        font-size: 16px;
+    }
+}
+
+</style>
+<body>
+    <div class="logout-message">
+        <h2>You have been logged out.</h2>
+        <a href="login.html" class="login-again-btn">Login Again</a>
+    </div>
+</body>
+</html>
